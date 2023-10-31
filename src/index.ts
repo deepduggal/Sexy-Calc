@@ -6,5 +6,8 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
-// Load JS
+// Load Main JS
 import './js/calculator';
+
+// Add Event Listeners
+import './js/event-listeners';

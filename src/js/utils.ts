@@ -10,6 +10,15 @@ export function isDecimal(char: string) {
   return char === '.';
 }
 
+/**
+ * Get a property from an object
+ * @param obj 
+ * @param key 
+ */
+export function getProperty<T extends {}, K extends keyof T>(obj: T, key: K) {
+  return obj[key];
+}
+
 // // Count the number of operators in an equation string
 // function numOps(eqn) {
 //   var num = 0;
