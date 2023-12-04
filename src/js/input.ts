@@ -33,7 +33,11 @@ export function onKeyDown(event: KeyboardEvent) {
   const { key } = event;
   if (key && validKeyboardKeys.has(key)) {
     event.preventDefault();
-    bttnHandler(validKeyboardKeys.get(key));
+    const keyName = validKeyboardKeys.get(key);
+    if (typeof keyName === 'undefined') {
+      throw new Error(`Key "${key}" is not a valid key.`); // TODO: Handle this error
+    }
+    bttnHandler(keyName);
   }
 }
 

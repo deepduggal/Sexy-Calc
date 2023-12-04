@@ -38,8 +38,8 @@ function findIndexOfNextTwoNumberOperation(operations: string[]): number | null 
   const orderedOperations = ['*', '/', '+', '-'];
   let matchedOrderedOperationIndex = 0;
   // Find first matching operation with highest precedence.
-  for(let i = 0, len = operations.length; i < len; i++) {
-    for(let j = 0, orderedOpsLen = orderedOperations.length; j < len; j++) {
+  for (let i = 0, len = operations.length; i < len; i++) {
+    for (let j = 0, orderedOpsLen = orderedOperations.length; j < len; j++) {
       // Update next two-number operation:
       // Check for a match and smallest orderedOperation index found in a match.
       // We use the smallest index bc orderedOperations is sorted
@@ -53,7 +53,7 @@ function findIndexOfNextTwoNumberOperation(operations: string[]): number | null 
 }
 
 // Solves an equation string, which is simply a lot of simple operations in one string
-export function solveEquation(numbers: string[], operators: string[]) {
+export function solveEquation(numbers: string[], operators: string[]): number {
   // Default solution is 0 when there's not enough to solve
   if (numbers.length === 0) {
     return 0;
@@ -67,24 +67,25 @@ export function solveEquation(numbers: string[], operators: string[]) {
   else {
     // Copy the equation parts for modifying as we solve parts of the equation
     const nums: string[] = numbers,
-          ops: string[] = operators;
+      ops: string[] = operators;
+
     // While there are still two-number operations to solve.
     // TODO: Edit while condition (should it be in terms of nums, ops, both, etc?)
-    while(ops.length > 0 && nums.length > 0) {
+    while (ops.length > 0 && nums.length > 0) {
       const nextOpIndex = findIndexOfNextTwoNumberOperation(ops);
       // Handle edge case where last operation is a two-number operation with only one number (ex. "3+", )
       if (!nextOpIndex) {
 
       }
       else {
-        const subSolution = doTwoNumberOperation(nums[nextOpIndex], ops[nextOpIndex], nums[nextOpIndex + 1]);
+        const subSolution = doTwoNumberOperation(Number(nums[nextOpIndex]), ops[nextOpIndex], Number(nums[nextOpIndex + 1]));
         // TODO: Replace 1st num with solution
         nums[nextOpIndex] = ;
         // TODO: Remove operator and 2nd num
       }
     }
   }
-  
+
   // TODO: Making EquationIterator
   // let subTotal = 0; // Store the accumulated result of 1 or more operations
   // for (let i = 0, len = operators.length; i < len; i++) {

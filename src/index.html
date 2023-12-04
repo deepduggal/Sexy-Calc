@@ -2,98 +2,108 @@
 <!-- TODO: Hover color change for backspace and gray buttons. Color change on click. -->
 <!-- TODO: Add separate css for desktop. Have a header, some info, add keywords/SEO stuff, ads on both sides -->
 <html lang="en">
-  <!--[if lte IE 8]>
+<!--[if lte IE 8]>
     <h1>Your Browser is out of date. Please switch to a modern browser <a href="https://www.google.com/chrome/browser">here.</a><h1>
   <![endif]-->
-  <head>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-89293172-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <meta charset="UTF-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta content="The galaxy's most beautiful, mobile-friendly online calculator." name="description">
-    <meta content="noodp" name="robots">
-    <meta content="online calculator mobile responsive beautiful design mortgage scientific graphic free simple trig math big large financial find paycheck log plus russian hindi arabic calculo secret kalkulator advanced calc sexy pretty calculador calcl calcli caulators cute plus button internet iphone android app" name="keywords">
-    <link href="https://deepduggal.github.io/Sexy-Calc/" rel="canonical">
-    <meta content="en_US" property="og:locale">
-    <meta content="website" property="og:type">
-    <meta content="Sexy Calc" property="og:title">
-    <meta content="The galaxy's most beautiful, mobile-friendly online calculator." property="og:description">
-    <meta content="https://deepduggal.github.io/Sexy-Calc/" property="og:url">
-    <meta content="Sexy Calc - The galaxy's most beautiful, mobile-friendly online calculator." property="og:site_name">
-    <title>
-      Sexy Calc - The galaxy's most beautiful, mobile-friendly online calculator.
-    </title>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:700" rel="stylesheet">
-  </head>
-  <body>
-    <section class="loading">
-      <h1 class="logo">Sexy Calc</h1>
-      <div class="beta">Beta</div>
-      <div class="share addthis_inline_share_toolbox"></div>
-      <div class="credits">
-        By
-        <a class="link" href="http://deepduggal.com" target="_blank">Deep Duggal</a>
+
+<head>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-89293172-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <meta charset="UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta
+    content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=0"
+    name="viewport">
+  <meta content="The galaxy's most beautiful, mobile-friendly online calculator." name="description">
+  <meta content="noodp" name="robots">
+  <meta
+    content="online calculator mobile responsive beautiful design mortgage scientific graphic free simple trig math big large financial find paycheck log plus russian hindi arabic calculo secret kalkulator advanced calc sexy pretty calculador calcl calcli caulators cute plus button internet iphone android app"
+    name="keywords">
+  <link href="https://deepduggal.github.io/Sexy-Calc/" rel="canonical">
+  <meta content="en_US" property="og:locale">
+  <meta content="website" property="og:type">
+  <meta content="Sexy Calc" property="og:title">
+  <meta content="The galaxy's most beautiful, mobile-friendly online calculator." property="og:description">
+  <meta content="https://deepduggal.github.io/Sexy-Calc/" property="og:url">
+  <meta content="Sexy Calc - The galaxy's most beautiful, mobile-friendly online calculator." property="og:site_name">
+  <title>
+    Sexy Calc - The galaxy's most beautiful, mobile-friendly online calculator.
+  </title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:700" rel="stylesheet">
+  <link href="./.old/css/sexycalc.css" rel="stylesheet">
+</head>
+
+<body>
+  <section class="loading">
+    <h1 class="logo">Sexy Calc</h1>
+    <div class="beta">Beta</div>
+    <div class="share addthis_inline_share_toolbox"></div>
+    <div class="credits">
+      By
+      <a class="link" href="http://deepduggal.com" target="_blank">Deep Duggal</a>
+    </div>
+  </section>
+  <section class="calculator">
+    <div class="error"></div>
+    <div class="solutionContainer">
+      <div class="display">
+        <input class="equation" name="equation" readonly="readonly" type="text" value="">
+        <input class="solution" name="solution" readonly="readonly" type="text" value="0">
       </div>
-    </section>
-    <section class="calculator">
-      <div class="error"></div>
-      <div class="solutionContainer">
-        <div class="display">
-          <input class="equation" name="equation" readonly="readonly" type="text" value="">
-          <input class="solution" name="solution" readonly="readonly" type="text" value="0">
-        </div>
-        <input class="backspaceButton bttn" name="backspace" type="button" value="X">
+      <input class="backspaceButton bttn" name="backspace" type="button" value="X">
+    </div>
+    <form class="buttonsContainer">
+      <div class="clearCol">
+        <input class="bttn" name="clear" type="button" value="Clear">
       </div>
-      <form class="buttonsContainer">
-        <div class="clearCol">
-          <input class="bttn" name="clear" type="button" value="Clear">
+      <div class="mainCol">
+        <div class="mainRow specialOperators">
+          <input class="bttn" name="percent" type="button" value="%">
+          <input class="bttn" name="squareRoot" type="button" value="√">
+          <input class="bttn" name="squared" type="button" value="x²">
         </div>
-        <div class="mainCol">
-          <div class="mainRow specialOperators">
-            <input class="bttn" name="percent" type="button" value="%">
-            <input class="bttn" name="squareRoot" type="button" value="√">
-            <input class="bttn" name="squared" type="button" value="x²">
-          </div>
-          <div class="mainRow">
-            <input class="bttn" name="seven" type="button" value="7">
-            <input class="bttn" name="eight" type="button" value="8">
-            <input class="bttn" name="nine" type="button" value="9">
-          </div>
-          <div class="mainRow">
-            <input class="bttn" name="four" type="button" value="4">
-            <input class="bttn" name="five" type="button" value="5">
-            <input class="bttn" name="six" type="button" value="6">
-          </div>
-          <div class="mainRow">
-            <input class="bttn" name="one" type="button" value="1">
-            <input class="bttn" name="two" type="button" value="2">
-            <input class="bttn" name="three" type="button" value="3">
-          </div>
-          <div class="mainRow">
-            <input class="bttn" name="zero" type="button" value="0">
-            <input class="bttn" name="decimalPoint" type="button" value=".">
-          </div>
+        <div class="mainRow">
+          <input class="bttn" name="seven" type="button" value="7">
+          <input class="bttn" name="eight" type="button" value="8">
+          <input class="bttn" name="nine" type="button" value="9">
         </div>
-        <div class="operatorsCol">
-          <input class="bttn" name="divide" type="button" value="/">
-          <input class="bttn" name="multiply" type="button" value="*">
-          <input class="bttn" name="subtract" type="button" value="-">
-          <input class="bttn" name="add" type="button" value="+">
-          <input class="bttn" name="equals" type="button" value="=">
+        <div class="mainRow">
+          <input class="bttn" name="four" type="button" value="4">
+          <input class="bttn" name="five" type="button" value="5">
+          <input class="bttn" name="six" type="button" value="6">
         </div>
-      </form>
-      <!-- %form.advancedButtonsContainer -->
-    </section>
-    <script src="./bundle.js" type="text/javascript"></script>
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587ef328a237144a" type="text/javascript"></script>
-  </body>
+        <div class="mainRow">
+          <input class="bttn" name="one" type="button" value="1">
+          <input class="bttn" name="two" type="button" value="2">
+          <input class="bttn" name="three" type="button" value="3">
+        </div>
+        <div class="mainRow">
+          <input class="bttn" name="zero" type="button" value="0">
+          <input class="bttn" name="decimalPoint" type="button" value=".">
+        </div>
+      </div>
+      <div class="operatorsCol">
+        <input class="bttn" name="divide" type="button" value="/">
+        <input class="bttn" name="multiply" type="button" value="*">
+        <input class="bttn" name="subtract" type="button" value="-">
+        <input class="bttn" name="add" type="button" value="+">
+        <input class="bttn" name="equals" type="button" value="=">
+      </div>
+    </form>
+    <!-- %form.advancedButtonsContainer -->
+  </section>
+  <script src="./bundle.js" type="text/javascript"></script>
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587ef328a237144a" type="text/javascript"></script>
+</body>
+
 </html>

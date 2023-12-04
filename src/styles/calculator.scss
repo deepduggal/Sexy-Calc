@@ -10,15 +10,18 @@ $errorColor: #98E19A;
 
 $speed: 0.3s;
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
+  user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;  
-  -ms-user-select: none;  
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
+
 .bttn {
   height: 100%;
   text-align: center;
@@ -27,12 +30,14 @@ html, body {
   color: white;
   cursor: pointer;
 }
+
 input {
   margin: 0;
   padding: 0;
   border: none;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
+
 .loading {
   height: 100%;
   width: 100%;
@@ -54,6 +59,7 @@ input {
     animation-iteration-count: infinite;
     cursor: pointer;
   }
+
   .beta {
     position: absolute;
     top: calc(50% + 0.2em);
@@ -67,15 +73,17 @@ input {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
   }
-  .share{
-    position: absolute; 
+
+  .share {
+    position: absolute;
     bottom: 0.3rem;
     left: 0.3rem;
     animation: appear 2s;
     -webkit-animation: appear 2s;
   }
+
   .credits {
-    position: absolute; 
+    position: absolute;
     bottom: 0.3rem;
     right: 0.3rem;
     animation: appear 2s;
@@ -84,6 +92,7 @@ input {
     .link {
       cursor: pointer;
     }
+
     .link:hover {
       color: white;
       -moz-transition: color 1s;
@@ -116,13 +125,14 @@ section.calculator {
     color: white;
     text-align: center;
   }
+
   .solutionContainer {
     width: 100%;
     height: 10%;
     background-color: $main;
     min-height: 3.8em;
-     
-    .display {  
+
+    .display {
       height: calc(100%);
       width: calc(75% - 2em);
       padding: 0 1em 0 1em;
@@ -140,6 +150,7 @@ section.calculator {
         background-color: $main;
         overflow: auto;
       }
+
       .solution {
         height: 2.2rem;
         width: calc(100% - 0.4rem);
@@ -153,6 +164,7 @@ section.calculator {
         overflow: auto;
       }
     }
+
     .backspaceButton {
       height: 100%;
       width: 25%;
@@ -164,10 +176,12 @@ section.calculator {
       -o-transition: background-color $speed;
       transition: background-color $speed;
     }
+
     .backspaceButton:hover {
       background-color: $mainDarker;
     }
   }
+
   form.buttonsContainer {
     width: 100%;
     height: 90%;
@@ -186,10 +200,12 @@ section.calculator {
         -o-transition: background-color $speed;
         transition: background-color $speed;
       }
+
       .bttn:hover {
         background-color: $accentDark;
       }
     }
+
     .mainCol {
       width: 75%;
       height: 90%;
@@ -198,7 +214,7 @@ section.calculator {
       .mainRow {
         height: 20%;
         width: 100%;
-        
+
         .bttn {
           height: 100%;
           width: 33.33%;
@@ -208,10 +224,12 @@ section.calculator {
           -o-transition: background-color $speed;
           transition: background-color $speed;
         }
+
         .bttn:hover {
           background-color: $mainDark;
         }
       }
+
       .mainRow.specialOperators {
         .bttn {
           background-color: $secondary;
@@ -220,16 +238,19 @@ section.calculator {
           -o-transition: background-color $speed;
           transition: background-color $speed;
         }
+
         .bttn:hover {
           background-color: $secondaryDark;
         }
       }
+
       .mainRow:nth-child(5) {
         .bttn:nth-child(1) {
           width: 66.66%;
         }
       }
     }
+
     .operatorsCol {
       width: 25%;
       height: 90%;
@@ -244,20 +265,22 @@ section.calculator {
         -o-transition: background-color $speed;
         transition: background-color $speed;
       }
+
       .bttn:hover {
         background-color: $secondaryDarker;
       }
-    } 
+    }
   }
+
   // form.advancedButtonsContainer {
 
   // }
 }
-.moreButtons.bttn
-.bttn:active {
-  -webkit-box-shadow: inset 0px 0px 15px 3px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px 0px 15px 3px rgba(0,0,0,0.75);
-  box-shadow: inset 0px 0px 15px 3px rgba(0,0,0,0.75);
+
+.moreButtons.bttn .bttn:active {
+  -webkit-box-shadow: inset 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
 }
 
 @media (min-width: 20rem) {
@@ -267,11 +290,13 @@ section.calculator {
       // font-size: 4.75vw;
       min-height: 2.3rem;
     }
+
     .bttn:active {
       font-size: 1.4rem;
     }
   }
 }
+
 @media (min-width: 48rem) {
   .calculator {
     .bttn {
@@ -279,11 +304,13 @@ section.calculator {
       // font-size: 3.75vw;
       min-height: 2.4rem;
     }
+
     .bttn:active {
       font-size: 1.5rem;
     }
   }
 }
+
 @media (min-width: 64rem) {
   .calculator {
     .bttn {
@@ -291,6 +318,7 @@ section.calculator {
       // font-size: 3.8vw;
       min-height: 3rem;
     }
+
     .bttn:active {
       font-size: 2.1rem;
     }
@@ -316,6 +344,7 @@ section.calculator {
     transform: scale3d(1, 1, 1);
   }
 }
+
 @keyframes pulse {
   from {
     -webkit-transform: scale3d(1, 1, 1);
@@ -332,7 +361,13 @@ section.calculator {
     transform: scale3d(1, 1, 1);
   }
 }
+
 @keyframes appear {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
